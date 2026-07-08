@@ -24,6 +24,15 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/health", (req, res) => {
+  res.json({
+    success: true,
+    message: "Service is healthy",
+    service: "MyPertamina App Service Mock",
+    timestamp: new Date().toISOString(),
+  });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/balance", balanceRoutes);
