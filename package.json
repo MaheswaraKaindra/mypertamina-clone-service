@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "db:schema": "mysql -u root -p < src/db/schema.sql",
+    "db:seed": "node src/db/seed.js"
   },
   "repository": {
     "type": "git",
