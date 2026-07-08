@@ -6,6 +6,8 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const balanceRoutes = require("./routes/balanceRoutes");
 const pointRoutes = require("./routes/pointRoutes");
+const vehicleRoutes = require("./routes/vehicleRoutes");
+const transactionRoutes = require("./routes/transactionRoutes");
 
 const app = express();
 
@@ -23,6 +25,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/balance", balanceRoutes);
 app.use("/api/points", pointRoutes);
+app.use("/api/vehicles", vehicleRoutes);
+app.use("/api/transactions", transactionRoutes);
 
 const PORT = process.env.PORT || 4000;
 
