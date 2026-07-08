@@ -8,6 +8,8 @@ const balanceRoutes = require("./routes/balanceRoutes");
 const pointRoutes = require("./routes/pointRoutes");
 const vehicleRoutes = require("./routes/vehicleRoutes");
 const transactionRoutes = require("./routes/transactionRoutes");
+const voucherRoutes = require("./routes/voucherRoutes");
+const notificationRoutes = require("./routes/notificationRoutes");
 
 const app = express();
 
@@ -27,6 +29,8 @@ app.use("/api/balance", balanceRoutes);
 app.use("/api/points", pointRoutes);
 app.use("/api/vehicles", vehicleRoutes);
 app.use("/api/transactions", transactionRoutes);
+app.use("/api/vouchers", voucherRoutes);
+app.use("/api/notifications", notificationRoutes);
 
 const PORT = process.env.PORT || 4000;
 
